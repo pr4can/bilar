@@ -1,0 +1,144 @@
+.feedback {
+	padding-top: 180px;
+	padding-bottom: 70px;
+}
+
+.feedback__container {
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+.feedback__title {
+	font-family: Panton-ExtraBold;
+	font-size: 40px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #373432;
+	margin: 43px 0 54px;
+}
+
+.feedback__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.feedback__input,
+.feedback__textarea {
+	width: 100%;
+	height: 70px;
+	font-family: Roboto-Regular;
+	font-size: 20px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #979797;
+	padding: 24px 50px;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	box-shadow: 0 0 15px 0 rgba(147, 147, 147, 0.25);
+	margin-bottom: 20px;
+	transition: 0.3s border;
+}
+
+.feedback__input:focus,
+.feedback__textarea:focus {
+	border-color: #F7941D;
+}
+
+.feedback__textarea {
+	height: 160px;
+	resize: none;
+	margin-bottom: 30px;
+}
+
+.feedback__btns {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.feedback__summary {
+	display: flex;
+	flex-direction: column;
+	max-width: 360px;
+	min-width: 240px;
+	width: 100%;
+	margin-right: 30px;
+}
+
+.feedback__summary .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	font-family: Roboto-Bold;
+	font-size: 18px;
+	color: #F7941D;
+	border-radius: 40px;
+	border: 2px solid #F7941D;
+	background-color: #FFFFFF;
+	cursor: pointer;
+	transition: 0.3s background, 0.3s color;
+	margin-bottom: 10px;
+}
+
+.feedback__summary .btn:hover {
+	background-color: #F7941D;
+	color: #FFFFFF;
+}
+
+.feedback__summary .label {
+	font-family: Roboto-Regular;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #979797;
+	pointer-events: none;
+}
+
+.feedback__accept {
+	display: flex;
+	flex-direction: column;
+	max-width: 360px;
+	min-width: 240px;
+	width: 100%;
+}
+
+.feedback__submit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	font-family: Roboto-Bold;
+	font-size: 18px;
+	color: #FFFFFF;
+	border-radius: 40px;
+	border: 2px solid #F7941D;
+	background-color: #F7941D;
+	cursor: pointer;
+	transition: 0.3s background, 0.3s color;
+	margin-bottom: 10px;
+}
+
+.feedback__submit:hover {
+	color: #F7941D;
+	background-color: #FFFFFF;
+}
+
+.feedback__agreement {
+	font-family: Roboto-Regular;
+	font-size: 12px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #979797;
+}
+
+.feedback__agreement a {
+	color: #F7941D;
+	transition: 0.3s color;
+}
+
+.feedback__agreement a:hover {
+	color: #979797;
+}

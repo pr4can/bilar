@@ -1,0 +1,113 @@
+.submenu {	
+	position: relative;
+	padding: 24px 0 34px;
+	background-color: rgba(35, 35, 35, 0.5);
+}
+
+.submenu__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.submenu__item {
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 106px;
+}
+
+.submenu__item:hover .submenu__img {
+	background-color: #F7941D;
+}
+
+.submenu__item:hover .submenu__name {
+	color: #F7941D;
+}
+
+.submenu__img {
+	display: block;
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	background-color: #FFFFFF;
+	transition: 0.3s background;
+}
+
+.submenu__item.-quality .submenu__img {
+	-webkit-mask-image: url(../img/quality.svg);
+	width: 60.6px;
+	height: 58.8px;
+}
+
+.submenu__item.-dealer .submenu__img {
+	-webkit-mask-image: url(../img/dealer.svg);
+	width: 59.3px;
+	height: 58.2px;
+}
+
+.submenu__item.-news .submenu__img {
+	-webkit-mask-image: url(../img/news.svg);
+	width: 77.25px;
+	height: 58.8px;
+}
+
+.submenu__item.-document .submenu__img {
+	-webkit-mask-image: url(../img/document.svg);
+	width: 70.25px;
+	height: 68.8px;
+}
+
+.submenu__item:not(:last-child) {
+	margin-right: 75px;
+}
+
+.submenu__name {
+	font-family: Roboto-Bold;
+	font-size: 20px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #FFFFFF;
+	text-align: center;
+	transition: 0.3s color;
+	margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+	.submenu {
+		padding: 0;
+		background-color: transparent;
+	}
+	.submenu__container {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.submenu__item:nth-child(n) {
+		justify-content: center;
+		height: 105px;
+		margin-right: 0;
+		margin-bottom: 10px;
+		background-color: rgba(35, 35, 35, 0.5);
+		width: calc((100% - 10px) / 2);
+	}
+	.submenu__item.-quality .submenu__img,
+	.submenu__item.-dealer .submenu__img {
+		width: 31px;
+		height: 30px;
+		margin-bottom: 15px;
+	}
+	.submenu__item.-news .submenu__img {
+		width: 40px;
+		height: 30px;
+		margin-bottom: 20px;
+	}
+	.submenu__item.-document .submenu__img {
+		width: 34px;
+		height: 30px;
+		margin-bottom: 20px;
+	}
+	.submenu__name {
+		font-size: 15px;
+	}
+}

@@ -1,0 +1,239 @@
+.about {
+	padding: 110px 0 130px;
+}
+
+.about-title {
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0 80px;
+	margin-bottom: 66px;
+}
+
+.about-title__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1320px;
+	min-height: 750px;
+	margin: 0 auto;
+}
+
+.about-title__logo {
+	max-width: 547px;
+	width: 100%;
+}
+
+.about__title__desc {
+	font-family: Panton-ExtraBold;
+	font-size: 30px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.about-main__container {
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+.about__h2 {
+	font-family: Panton-ExtraBold;
+	font-size: 40px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #373432;
+	margin: 0;
+}
+
+.about-company {
+	margin-top: 66px;
+	margin-bottom: 90px;
+}
+
+.about-company__h2 {
+	margin-bottom: 66px;
+}
+
+.about-company__list {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 90px;
+}
+
+.about-company__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc((100% - 480px) / 5);
+}
+
+.about-company__img {
+	max-width: 70px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.about-company__info p {
+	font-family: Roboto-Regular;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.48px;
+	color: #000000;
+	text-align: center;
+	margin: 0;
+}
+
+.about-company__info p span {
+	font-family: Roboto-Bold;
+	color: #F7941D;
+	line-height: inherit;
+	letter-spacing: inherit;
+}
+
+.about-company__info p:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.about-company__desc {
+	padding: 45px 65px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.about-company__desc p  {
+	font-family: Roboto-Regular;
+	font-size: 25px;
+	line-height: 150%;
+	letter-spacing: 0.48px;
+	color: #000000;
+	margin: 0;
+}
+
+.about-company__desc p:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.about-technology {
+	margin-bottom: 90px;
+}
+
+.about-technology__h2 {
+	margin-bottom: 50px;
+}
+
+.about-technology__item {
+	display: flex;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.about-technology__item:not(:last-child) {
+	margin-bottom: 90px;
+}
+
+.about-technology__item:nth-child(2n) .about-technology__img {
+	order: 2;
+}
+
+.about-technology__item:nth-child(2n) .about-technology__info {
+	order: 1;
+}
+
+.about-technology__img {
+	flex-shrink: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.about-technology__info {
+	flex-shrink: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 60px;
+	min-height: 470px;
+}
+
+.about-technology__info::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 5px;
+	height: 100%;
+	background-color: #F7941D;
+}
+
+.about-technology__item:nth-child(2n) .about-technology__info::after {
+	right: auto;
+	left: 0;
+}
+
+.about-technology__name {
+	font-family: Panton-ExtraBold;
+	font-size: 30px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	margin: 0;
+}
+
+.about-technology__desc {
+	font-family: Roboto-Regular;
+	font-size: 25px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	margin: 40px 0 0;
+}
+
+.about-technology__item.-half .about-technology__info,
+.about-technology__item.-half .about-technology__img {
+	width: 50%;
+}
+
+.about-technology__item.-big-img .about-technology__img {
+	width: 65%;
+}
+
+.about-technology__item.-big-img .about-technology__info {
+	width: 35%;
+}
+
+.about-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-columns__item {
+	width: calc((100% - 50px) / 3);
+	padding: 40px;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.about-columns__name {
+	font-family: Panton-Bold;
+	font-size: 25px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #F7941D;
+	margin: 0 0 40px;
+}
+
+.about-columns__desc {
+	font-family: Panton-Regular;
+	font-size: 22px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	margin: 0;
+}

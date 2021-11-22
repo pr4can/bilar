@@ -1,0 +1,152 @@
+.services {
+	padding: 0 0 20px;
+	background-color: #46413E;
+	overflow: hidden;
+}
+
+.services__title {
+	text-align: center;
+	margin-bottom: 36px;
+}
+
+.services__container {
+	position: relative;
+	display: flex;
+	max-width: 1850px;
+	margin: 0 auto;
+}
+
+.services__container::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 100vw;
+	height: calc(100% - 110px);
+	background-color: #373432;
+	transform: translateX(-50%);
+	z-index: 0;
+}
+
+.services__column {
+	position: relative;
+	width: calc((100% - 30px) / 2);
+	z-index: 1;
+}
+
+.services__column:not(:last-child) {
+	margin-right: 30px;
+}
+
+.services__row {
+	display: flex;
+}
+
+.services__row:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.services__item {
+	position: relative;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.services__item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0;
+	transition: 0.3s opacity;
+	z-index: 2;
+}
+
+.services__item:hover::after {
+	opacity: 0.7;
+}
+
+.services__item.-big {
+	min-height: 716px;
+}
+
+.services__item.-small {
+	min-height: 343px;
+}
+
+.services__name {
+	position: relative;
+	font-family: Roboto-Bold;
+	font-size: 30px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0;
+	z-index: 5;
+}
+
+@media screen and (max-width: 1400px) {
+	.services__row {
+		flex-direction: column;
+	}
+	.services__item.-big {
+		height: 100%;
+	}
+	.services__row > .services__column {
+		width: 100%;
+	}
+	.services__row > .services__column:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 30px;		
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.services__container {
+		flex-wrap: wrap;
+	}
+	.services__column {
+		width: 100%;
+	}
+	.services__column:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	.services__item.-big {
+		min-height: 160px;
+	}
+	.services__item.-small {
+		min-height: 100px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.services__item {
+		padding: 15px;
+	}
+	.services__name {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 475px) {
+	.services {
+		padding-bottom: 30px;
+	}
+	.services__title {
+		margin-bottom: 20px;
+	}
+	.services__container::before {
+		display: none;
+	}
+}

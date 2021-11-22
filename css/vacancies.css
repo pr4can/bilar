@@ -1,0 +1,239 @@
+.vacancies {
+	padding-top: 180px;
+	padding-bottom: 100px;
+}
+
+.vacancies__container {
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+.vacancies__title {
+	font-family: Panton-ExtraBold;
+	font-size: 40px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #373432;
+	margin: 43px 0 56px;
+}
+
+.vacancies__case {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 36px;
+}
+
+.vacancies-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-shrink: 0;
+	width: 180px;
+	margin-right: 80px;
+}
+
+.vacancies-menu__item {
+	position: relative;
+	font-family: Roboto-Medium;
+	font-size: 20px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #F7941D;
+	transition: 0.3s color;
+}
+
+.vacancies-menu__item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	width: 100%;
+	height: 1px;
+	background-color: #F7941D;
+	transition: 0.3s background;
+}
+
+.vacancies-menu__item:hover {
+	color: #373432;
+}
+
+.vacancies-menu__item:hover::after {
+	background-color: #373432;
+}
+
+.vacancies-menu__item:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.vacancies-suggestions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.vacancies-suggestions__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: calc((100% - 30px) / 2);
+	padding: 50px 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px 0 rgba(180, 180, 180, 0.25);
+	border: 2px solid transparent;
+	transition: 0.3s border;
+	margin-bottom: 30px;
+}
+
+.vacancies-suggestions__item:hover {
+	border-color: #F7941D;
+}
+
+.vacancies-suggestions__item span {
+	font-family: Roboto-Bold;
+	font-size: 25px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.vacancies-suggestions__item img {
+	max-width: 130px;
+	width: 100%;
+}
+
+.vacancies-list__item {
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	box-shadow: 0 0 30px 0 rgba(149, 149, 149, 0.25);
+}
+
+.vacancies-list__item:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.vacancies-list__head {
+	display: flex;
+	align-items: center;
+	padding: 45px 70px 45px 80px;
+}
+
+.vacancies-list__title {
+	font-family: Roboto-Bold;
+	font-size: 25px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	margin: 0 30px 0 0;
+}
+
+.vacancies-list__response {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 360px;
+	height: 0;
+	font-family: Roboto-Bold;
+	font-size: 18px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #FFFFFF;
+	border-radius: 40px;
+	background-color: #F7941D;
+	border: 3px solid #F7941D;
+	margin-left: auto;
+	margin-right: 77px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s background, 0.3s color, 0.3s opacity, 0.3s visibility 0.3s, 0.3s height;
+}
+
+.vacancies-list__response:hover {
+	color: #F7941D;
+	background-color: transparent;
+}
+
+.vacancies-list__head img {
+	width: 28px;
+	cursor: pointer;
+	transition: 0.3s transform;
+}
+
+.vacancies-list__item.-open .vacancies-list__response {
+	height: 50px;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.3s background, 0.3s color, 0.3s opacity 0.1s, 0s visibility, 0.1s height;
+}
+
+.vacancies-list__item.-open img {
+	transform: rotate(180deg);
+}
+
+.vacancies-list__body {
+	display: none;
+	padding: 35px 70px 60px 80px;
+}
+
+.vacancies-list__group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.vacancies-list__name {
+	font-family: Roboto-Bold;
+	font-size: 20px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+.vacancies-list__group ul {
+	padding: 0;
+	margin: 0;
+}
+
+.vacancies-list__group li {
+	position: relative;
+	padding-left: 27px;
+	list-style: none;
+	font-family: Roboto-Regular;
+	font-size: 18px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+}
+
+.vacancies-list__group li::before {
+	content: "";
+	position: absolute;
+	left: 11.5px;
+	top: 8.5px;
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #000000;
+}
+
+.vacancies-list__feedback {
+	font-family: Roboto-Regular;
+	font-size: 18px;
+	line-height: 120%;
+	letter-spacing: 0.8px;
+	color: #000000;
+	max-width: 1180px;
+}
+
+.vacancies-list__feedback a {
+	color: #F7941D;
+	transition: 0.3s color;
+}
+
+.vacancies-list__feedback a:hover {
+	color: #000000;
+}
