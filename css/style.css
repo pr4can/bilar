@@ -159,6 +159,15 @@ header {
 	display: none;
 }
 
+@media screen and (max-width: 991px) {
+	.breadcrumbs__item {
+		font-family: Roboto-Regular;
+	}
+	.breadcrumbs__item:not(:last-child) {
+		margin-right: 5px;
+	}
+}
+
 @media screen and (max-width: 960px) {
 	.link-more {
 		height: 40px;
@@ -169,5 +178,16 @@ header {
 @media screen and (max-width: 475px) {
 	.h2-title {
 		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.breadcrumbs__item {
+		font-size: 13px;
+		padding-left: 25px;
+	}
+	.breadcrumbs__item::before {
+		width: 15px;
+		top: -1px;
 	}
 }
