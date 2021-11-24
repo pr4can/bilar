@@ -345,5 +345,27 @@ $(document).ready(function() {
         $(".partners-catalogs, .partners-request").slideToggle();
     });
     
+    $(window).on("load resize", function() {
+        if($(window).innerWidth() <= 991) {
+            $(function() {
+                (function makeTabsSameWidth() {
+                    function setEqualWidth(tabs) {
+                        var maxWidth = 0;
+                        tabs.each(function() {
+                            currentWidth = $(this).outerWidth();
+                            if (currentWidth > maxWidth) {
+                                maxWidth = currentWidth;
+                            }
+                        });
+                        tabs.width(maxWidth);
+                    }
+                    setEqualWidth($(".services-table__tbody .services-table__td"));
+                })();
+            });
+        }
+        else {
+            $(".services-table__td").removeAttr("style");
+        }
+    });
 });
 
