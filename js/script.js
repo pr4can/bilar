@@ -206,6 +206,18 @@ $(document).ready(function() {
             arrows: true,
             autoplay: true,
             autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: "unslick"
+                }
+            ]
         });
     });
 
@@ -247,7 +259,10 @@ $(document).ready(function() {
             }
         });
         if ($('.similar-slider').length > 0 || $(".gallery-slider").length > 0) {
-            $('.similar-slider, .gallery-slider').slick('refresh');
+            $('.similar-slider').slick('refresh');
+            if ($(window).innerWidth() > 600) {
+                $('.gallery-slider').slick('refresh');
+            }
         }        
     });
 
@@ -366,6 +381,31 @@ $(document).ready(function() {
         else {
             $(".services-table__td").removeAttr("style");
         }
+    });
+
+    $(".partners-dropdown__selected").on("click", function() {
+        $(this).parent().toggleClass("-active");
+        $(this).parent().find(".partners-dropdown__list").slideToggle();
+    });
+
+    $(".partners-dropdown__item").on("click", function() {
+        let tab = $(this).data("tab");
+        $(this).parent().parent().toggleClass("-active");
+        $(this).parent().parent().find(".partners-dropdown__list").slideToggle();
+        $(".tabs__item-body").each(function() {
+            if ($(this).data("tab") === tab) {
+                $(this).addClass("-active");
+            }
+            else {
+                $(this).removeClass("-active");
+            }
+        });
+    });
+
+    $(".news-gallery__more.-mobile").on("click", function(event) {
+        event.preventDefault();
+        $(this).parent().find(".gallery-slider__item").addClass("-show");
+        $(this).fadeOut();
     });
 });
 
